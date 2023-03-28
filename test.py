@@ -10,8 +10,12 @@ def encode(password):
     memory = int(encoded_password)
 
 
-def decode(password):
-    pass
+def decode(encoded_password):
+    temp_pass = memory
+    encoded_password = ''
+    for digit in str(temp_pass):
+        encoded_password += str((int(digit) - 3))
+    return encoded_password
 
 
 if __name__ == '__main__':
